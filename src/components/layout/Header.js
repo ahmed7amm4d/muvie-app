@@ -42,6 +42,12 @@ const Header = () => {
                         <span className="text">Search</span>
                     </NavLink>
                 </li>
+                <li className="item item-scroll">
+                    <div className="link scroll" onClick={()=> window.scroll(0,0)}>
+                        <HiOutlineChevronDoubleLeft className="svg svg-scroll" />
+                        <span className="text">Scroll</span>
+                    </div>
+                </li>
             </ul>
         </nav>
     );

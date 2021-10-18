@@ -3,6 +3,7 @@
     background-color: #23232e;
     transition: width 200ms ease;
     z-index: 100;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.25);
 }
 
 .nav {
@@ -12,6 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 }
 
 .logo {
@@ -75,6 +77,14 @@
     transition: 300ms;
 }
 
+.svg-scroll {
+    transform: rotate(90deg);
+}
+
+.item-scroll {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 600px) {
     .navbar {
         bottom: 0;
@@ -83,11 +93,7 @@
     }
 
     .logo {
-        margin: 0;
-    }
-
-    .logo .svg {
-        transform: rotate(90deg);
+        display: none;
     }
 
     .navbar:hover .logo .svg {
@@ -117,10 +123,15 @@
     }
 
     .navbar:hover ~ .main {
-        margin-left: 16rem;
+        /* margin-left: 16rem; */
+        filter: blur(5px);
     }
 
     .navbar:hover .text {
         display: inline;
+    }
+
+    .item:last-child {
+        margin-top: auto;
     }
 }

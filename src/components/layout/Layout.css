@@ -1,11 +1,13 @@
 .main {
     margin-left: 5rem;
-    padding: 1rem;
-    transition: all 200ms ease;
+    padding: 1rem 4rem;
+    padding-right: 5rem;
+    transition: all 200ms;
 }
 
 @media only screen and (max-width: 600px) {
     .main {
         margin: 0;
+        padding: 1rem 1rem;
     }
 }
