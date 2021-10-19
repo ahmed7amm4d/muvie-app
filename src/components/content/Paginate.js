@@ -20,7 +20,7 @@ const Paginate = (props) => {
     return (
         <div className={classes.pagination}>
             <ThemeProvider theme={darkTheme}>
-                <Pagination onChange={e => pageChangeHandler(e.target.textContent)} count={props.pageNumbers} 
+                <Pagination onChange={event => pageChangeHandler(event.target.textContent)} count={props.pageNumbers} 
                 variant="outlined" shape="rounded" size="large" hidePrevButton hideNextButton />
             </ThemeProvider>
         </div>
