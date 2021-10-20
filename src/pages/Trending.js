@@ -1,22 +1,24 @@
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import React, { useCallback, useEffect, useState } from "react";
 
 import ContentItem from "../components/content/ContentItem";
-import classes from './styles/Trending.module.css';
-import Paginate from "../components/content/Paginate";
+import classes from './styles/Pages.module.css';
+import CustomPagination from "../components/content/pagination/CustomPagination";
 
 const Trending = (props) => {
     const [page, setPage] = useState(1);
     const [content, setContent] = useState([]);
 
-    const fetchTrending = useCallback(async () => {
+    const fetchTrending = async () => {
         const { data } = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`);
         setContent(data.results);
-    }, [page]);
+        //eslint-disable-next-line
+    };
 
     useEffect(() => {
         fetchTrending();
-    }, [fetchTrending]);
+        //eslint-disable-next-line
+    }, [page]);
 
     return (
         <React.Fragment>
@@ -27,7 +29,7 @@ const Trending = (props) => {
                     date={item.release_date || item.first_air_date} mediaType={item.media_type} rating={item.vote_average} language={item.original_language} />;
                 })}
             </div>
-            <Paginate setPage={setPage} pageNumbers={10} />
+            <CustomPagination setPage={setPage} numberOfPages={5} />
         </React.Fragment>
     );
 };

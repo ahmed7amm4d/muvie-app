@@ -19,25 +19,25 @@ const Header = () => {
                     </NavLink>
                 </li>
                 <li className="item">
-                    <NavLink className="link" to='/trending'>
+                    <NavLink className="link" activeClassName="active-link" to='/trending'>
                         <MdWhatshot className="svg" />
                         <span className="text">Trending</span>
                     </NavLink>
                 </li>
                 <li className="item">
-                    <NavLink className="link" to='/movies'>
+                    <NavLink className="link" activeClassName="active-link" to='/movies'>
                         <RiMovieFill className="svg" />
                         <span className="text">Movies</span>
                     </NavLink>
                 </li>
                 <li className="item">
-                    <NavLink className="link" to='/shows'>
+                    <NavLink className="link" activeClassName="active-link" to='/shows'>
                         <IoTv className="svg" />
                         <span className="text">Shows</span>
                     </NavLink>
                 </li>
                 <li className="item">
-                    <NavLink className="link" to='/search'>
+                    <NavLink className="link" activeClassName="active-link" to='/search'>
                         <IoSearch className="svg" />
                         <span className="text">Search</span>
                     </NavLink>

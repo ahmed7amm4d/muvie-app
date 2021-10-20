@@ -10,12 +10,6 @@
     scroll-behavior: smooth;
 }
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
 body {
     padding: 0;
     margin: 0;
@@ -41,5 +35,6 @@ body {
     color: palevioletred;
     text-transform: lowercase;
     font-size: 2.5rem;
-    margin-top: 0;
+    margin: 1.5rem 1rem 2rem 1rem;
+    margin-right: 0;
 }

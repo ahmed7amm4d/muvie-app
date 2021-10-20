@@ -28,7 +28,7 @@
     margin-right: 4rem;
     color: #ececec;
     font-size: 2rem;
-    /* font-weight: 700; */
+    font-weight: 700;
     letter-spacing: normal;
 }
 
@@ -83,6 +83,11 @@
 
 .item-scroll {
     cursor: pointer;
+}
+
+.active-link {
+    filter: grayscale(0%);
+    color: #ececec;
 }
 
 @media only screen and (max-width: 900px) {
