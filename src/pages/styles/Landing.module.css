@@ -13,7 +13,6 @@
     font-weight: 800;
     font-size: 8rem;
     margin: 6rem 1rem 0 3rem;
-    margin-right: 0;
     line-height: 8rem;
 }
 
@@ -21,4 +20,43 @@
     color: white;
     margin: 1rem 1rem 0 3rem;
     font-size: 1.5rem;
+}
+
+.landing-page-button {
+    border: none;
+    font-family: inherit;
+    font-size: 1.2rem;
+    margin: 1rem 1rem 0 3rem;
+    background-color: #f9002b;
+    border: 1px solid #f9002b;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    transition: box-shadow 300ms;
+}
+
+.landing-page-button:hover {
+    box-shadow: inset 12rem 0 0 0 black;
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .landing-page-title {
+        font-size: 5rem;
+        line-height: 5rem;
+        margin: 12rem 1rem 0 1rem;
+    }
+
+    .landing-page-paragraph {
+        margin: 1rem 1rem 0 1rem;
+    }
+
+    .landing-page-button {
+        margin: 3rem 1rem 0 1rem;
+    }
 }

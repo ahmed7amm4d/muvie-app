@@ -1,7 +1,7 @@
 .navbar {
     position: fixed;
-    background-color: white;
-    transition: width 200ms ease;
+    background-color: black;
+    transition: all 200ms ease;
     z-index: 100;
 }
 
@@ -19,7 +19,7 @@
     margin-bottom: 1rem;
     text-align: center;
     width: 100%;
-    background: black;
+    background: #15181c;
 }
 
 .logo .text {
@@ -39,6 +39,7 @@
 
 .navbar:hover .logo .svg {
     transform: rotate(-180deg);
+    color: white;
 }
 
 .item {
@@ -51,29 +52,40 @@
     justify-content: left;
     height: 5rem;
     text-decoration: none;
-    filter: grayscale(100%);
     transition: 200ms;
     width: 100%;
 }
 
 .link:hover {
-    filter: grayscale(0%);
-    background: black;
+    background: #15181c;
+}
+
+.link:hover .text {
+    color: white;
+}
+
+.item .link:hover .svg {
     color: white;
 }
 
 .text {
+    color: black;
     display: none;
     margin-left: 1rem;
     letter-spacing: 0.25rem;
+    transition: 200ms;
 }
 
 .svg {
     min-height: 1.5rem;
     min-width: 1.5rem;
     margin: 0 1.5rem;
-    color: #f9002b;
+    color: white;
     transition: 200ms;
+}
+
+.navbar:hover .svg {
+    color: black;
 }
 
 .svg-scroll {
@@ -84,8 +96,11 @@
     cursor: pointer;
 }
 
-.active-link {
-    filter: grayscale(0%);
+.nav .item .active-link .svg {
+    color: #f9002b;
+}
+
+.item .active-link .text {
     color: #f9002b;
 }
 
@@ -124,6 +139,7 @@
 
     .navbar:hover {
         width: 16rem;
+        background-color: white;
     }
 
     .navbar:hover ~ .main {

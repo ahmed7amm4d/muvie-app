@@ -57,10 +57,13 @@
 @media only screen and (max-width: 900px) {
     .card {
         width: 150px;
+        height: 330px;
     }
 
     .title {
-        font-size: 1rem;
+        font-size: 0.8rem;
+        margin-top: 0.1rem;
+        margin-bottom: 0.2rem;
     }
 
     .subtitle {
