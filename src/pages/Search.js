@@ -2,7 +2,9 @@ import React from "react";
 
 const Search = (props) => {
     return (
-        <h1>Search Page</h1>
+        <div className="page-container">
+            <h1 className="page-title"><span className="page-title-span">Search</span> Page</h1>
+        </div>
     );
 };
 

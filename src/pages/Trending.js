@@ -21,16 +21,16 @@ const Trending = (props) => {
     }, [page]);
 
     return (
-        <React.Fragment>
-            <h1 className="page-title">Trending Today</h1>
-            <div className={classes.container}>
-                {content && content.map((item) => {
-                    return <ContentItem key={item.id} id={item.id} poster={item.poster_path} title={item.title || item.name} 
-                    date={item.release_date || item.first_air_date} mediaType={item.media_type} rating={item.vote_average} language={item.original_language} />;
-                })}
+            <div className="page-container">
+                <h1 className="page-title"><span className="page-title-span">Trending</span> Today</h1>
+                <div className={classes.container}>
+                    {content && content.map((item) => {
+                        return <ContentItem key={item.id} id={item.id} poster={item.poster_path} title={item.title || item.name} 
+                        date={item.release_date || item.first_air_date} mediaType={item.media_type} rating={item.vote_average} language={item.original_language} />;
+                    })}
+                </div>
+                <CustomPagination setPage={setPage} numberOfPages={5} />
             </div>
-            <CustomPagination setPage={setPage} numberOfPages={5} />
-        </React.Fragment>
     );
 };
 

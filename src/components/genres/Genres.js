@@ -21,7 +21,7 @@ const Genres = (props) => {
         fetchGenres();
 
         return () => {
-            props.setGenres({});
+            props.setGenres([]);
         };
         // eslint-disable-next-line
     }, [])
@@ -48,11 +48,11 @@ const Genres = (props) => {
             <ThemeProvider theme={darkTheme}>
                 {props.selectedGenres && props.selectedGenres.map((genre) => {
                     return <Chip key={genre.id} label={genre.name} variant="outlined" onDelete={() => chipDeleteHandler(genre)}  
-                    style={{backgroundColor: 'palevioletred', borderColor: "palevioletred", borderRadius: 5, marginRight: 10, fontFamily: "inherit", marginBottom: 10}} />
+                    style={{backgroundColor: "black", borderColor: "white", borderRadius: 2, marginRight: 10, fontFamily: "inherit", marginBottom: 10, color: '#f9002b' ,fontSize: '0.9rem'}} />
                 })}
                 {props.genres && props.genres.map((genre) => {
                     return <Chip key={genre.id} label={genre.name} variant="outlined" onClick={() => chipClickHandler(genre)} 
-                    style={{borderColor: "palevioletred", borderRadius: 5, marginRight: 10, fontFamily: "inherit", marginBottom: 10}} />
+                    style={{borderColor: "#f9002b", borderRadius: 2, marginRight: 10, fontFamily: "inherit", marginBottom: 10, fontSize: '0.9rem'}} />
                 })}
             </ThemeProvider>
         </div>

@@ -1,0 +1,24 @@
+.container {
+    height: 100vh;
+    background-color: black;
+    background-image:  linear-gradient(to left, rgba(0,0,0, 0) 30%,rgba(0,0,0, 1) 100%), url('../../assets/landing-background.jpg');
+    background-size: contain;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+.landing-page-title {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 8rem;
+    margin: 6rem 1rem 0 3rem;
+    margin-right: 0;
+    line-height: 8rem;
+}
+
+.landing-page-paragraph {
+    color: white;
+    margin: 1rem 1rem 0 3rem;
+    font-size: 1.5rem;
+}

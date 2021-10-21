@@ -1,82 +1,57 @@
 .card {
     display: flex;
     flex-direction: column;
-    padding: 0.4rem;
     width: 270px;
     height: 540px;
     border-radius: 0.25rem;
     position: relative;
     cursor: pointer;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.25);
-    margin: 1.5rem 0;
+    margin: 1.5rem 1rem;
     justify-content: space-between;
-    transition: all 200ms;
-    background-color: #23232e;
+    transition: transform 200ms;
 }
 
 .card:hover {
-    background: #141418;
     transform: scale(1.075);
 }
 
 .poster {
     border-radius: 0.25rem;
     width: 100%;
-    position: relative;
 }
 
 .title {
-    color: palevioletred;
+    color: white;
     text-align: left;
     font-size: 1.2rem;
-    padding-top: 1rem;
-    padding-left: 0.5rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
 }
 
 .subtitle {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     color: #b6b6b6;
-    padding: 1rem 0.5rem;
+    font-weight: 300;
 }
 
 .badge {
-    position: absolute;
-    right: -7px;
-    top: -7px;
-    background-color: palevioletred;
-    color: white;
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-    z-index: 1;
-}
-
-.nobadge {
-    display: none;
+    color: #b6b6b6;
+    font-weight: 300;
 }
 
 .type {
-    border: 1px solid palevioletred;
+    border: 1px solid #f9002b;
     padding: 0.25rem 0.5rem;
     border-radius: 5px;
+    font-weight: 400;
 }
 
-.language {
-    position: absolute;
-    bottom: -10px;
-    right: -2px;
-    background: #23232e;
-    color: #b6b6b6;
-    border-radius: 3px 0 0 0;
-    padding: 0.2rem 0.4rem;
-    z-index: 1;
-    text-transform: uppercase;
-    transition: background 200ms;
-}
-
-.card:hover .language {
-    background: #141418;
+.notype {
+    border: none;
 }
 
 @media only screen and (max-width: 900px) {
