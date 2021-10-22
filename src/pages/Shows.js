@@ -28,7 +28,7 @@ const Shows = (props) => {
 
     return (
         <div className="page-container">
-            <h1 className="page-title"><span className="page-title-span">Discover</span> TV-Shows</h1>
+            <h1 className="page-title"><span className="page-title-span">Discover</span> TV Shows</h1>
             <Genres type='tv' genres={genres} selectedGenres={selectedGenres} setGenres={setGenres} setSelectedGenres={setSelectedGenres} setPage={setPage} />
             <div className={classes.container}>
                 {movies && movies.map((item) => {

@@ -3,3 +3,35 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+.validate {
+    color: #f9002b;
+    position: absolute;
+    font-size: 1rem;
+    top: 3rem;
+    left: 0.5rem;
+    animation-name: validation;
+    animation-duration: 400ms;
+    letter-spacing: 0.1rem;
+}
+
+.hr1 {
+    width: 100%;
+    margin-top: 3.2rem;
+    margin-bottom: 1rem; 
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, #b6b6b6, transparent);  
+}
+
+@keyframes validation {
+    from {
+        top: 0rem;
+        opacity: 0;
+    }
+
+    to {
+        top: 3rem;
+        opacity: 1;
+    }
+}

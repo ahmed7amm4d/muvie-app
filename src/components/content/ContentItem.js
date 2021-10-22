@@ -107,6 +107,30 @@ const ContentItem = (props) => {
         case 'ms':
             language = 'Malay';
             break;
+        case 'kn':
+            language = 'Kannada';
+            break;
+        case 'he':
+            language = 'Hebrew';
+            break;
+        case 'am':
+            language = 'Amharic';
+            break;
+        case 'ur':
+            language = "Urdu";
+            break;
+        case 'gu':
+            language = "Gujarati";
+            break;
+        case 'sl':
+            language = "Slovenian";
+            break;
+        case 'fa':
+            language = "Persian";
+            break;
+        case 'hu':
+            language = "Hungarian";
+            break;
         default:
             language = props.language;
     }

@@ -46,11 +46,56 @@ body {
     margin-left: 5rem;
     padding: 1rem 4rem;
     padding-right: 5rem;
+    margin-bottom: 2rem;
+}
+
+.search-container {
+    display: flex;
+    margin: 1.5rem 1rem 2rem 1rem;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.search-field {
+    width: 20rem;
+}
+
+.search-button {
+    background-color: white !important;
+}
+
+.search-button .search-svg {
+    min-height: 1.2rem;
+    min-width: 1.2rem;
+    transition: all 200ms;
+}
+
+.search-button:hover .search-svg {
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+}
+
+.tabs-container {
+    display: flex;
+    margin: 1.5rem 1rem 2rem 1rem;
 }
 
 @media only screen and (max-width: 900px) {
     .page-container {
         margin: 0;
         padding: 1rem 1rem;
+        margin-bottom: 4rem;
+    }
+
+    .search-container {
+        justify-content: center;
+    }
+
+    .search-field {
+        flex: 1;
+    }
+
+    .tabs-container {
+        justify-content: center;
     }
 }

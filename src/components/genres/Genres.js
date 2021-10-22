@@ -27,7 +27,17 @@ const Genres = (props) => {
     }, [])
 
     const chipClickHandler = (genre) => {
-        props.setSelectedGenres([...props.selectedGenres, genre]);
+        props.setSelectedGenres([...props.selectedGenres, genre].sort(function(a, b) {
+            var nameA = a.name.toUpperCase();
+            var nameB = b.name.toUpperCase();
+            if (nameA < nameB) {
+              return -1;
+            }
+            if (nameA > nameB) {
+              return 1;
+            }
+            return 0;
+          }));
         props.setGenres(props.genres.filter((g) => {
             return g.id !== genre.id;
         }));
@@ -35,10 +45,21 @@ const Genres = (props) => {
     };
 
     const chipDeleteHandler = (genre) => {
+        console.log(props.selectedGenres);
         props.setSelectedGenres(props.selectedGenres.filter((g) => {
             return g.id !== genre.id;
         }));
-        props.setGenres([...props.genres, genre]);
+        props.setGenres([...props.genres, genre].sort(function(a, b) {
+            var nameA = a.name.toUpperCase();
+            var nameB = b.name.toUpperCase();
+            if (nameA < nameB) {
+              return -1;
+            }
+            if (nameA > nameB) {
+              return 1;
+            }
+            return 0;
+          }));
         props.setPage(1);
     };
 
@@ -48,11 +69,11 @@ const Genres = (props) => {
             <ThemeProvider theme={darkTheme}>
                 {props.selectedGenres && props.selectedGenres.map((genre) => {
                     return <Chip key={genre.id} label={genre.name} variant="outlined" onDelete={() => chipDeleteHandler(genre)}  
-                    style={{backgroundColor: "black", borderColor: "white", borderRadius: 2, marginRight: 10, fontFamily: "inherit", marginBottom: 10, color: '#f9002b' ,fontSize: '0.9rem'}} />
+                    style={{ borderColor: "#f9002b", borderRadius: 2, marginRight: 10, fontFamily: "inherit", marginBottom: 10, fontSize: '0.9rem' }} />
                 })}
                 {props.genres && props.genres.map((genre) => {
                     return <Chip key={genre.id} label={genre.name} variant="outlined" onClick={() => chipClickHandler(genre)} 
-                    style={{borderColor: "#f9002b", borderRadius: 2, marginRight: 10, fontFamily: "inherit", marginBottom: 10, fontSize: '0.9rem'}} />
+                    style={{ borderColor: "white", borderRadius: 2, marginRight: 10, fontFamily: "inherit", marginBottom: 10, fontSize: '0.9rem' }} />
                 })}
             </ThemeProvider>
         </div>

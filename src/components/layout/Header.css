@@ -97,6 +97,7 @@
         bottom: 0;
         width: 100vw;
         height: 5rem;
+        
     }
 
     .logo {
@@ -156,5 +157,5 @@
 
     .navbar:hover .svg {
         color: black;
-}
+    }
 }
