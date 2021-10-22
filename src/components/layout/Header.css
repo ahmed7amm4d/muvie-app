@@ -60,14 +60,6 @@
     background: #15181c;
 }
 
-.link:hover .text {
-    color: white;
-}
-
-.item .link:hover .svg {
-    color: white;
-}
-
 .text {
     color: black;
     display: none;
@@ -82,10 +74,6 @@
     margin: 0 1.5rem;
     color: white;
     transition: 200ms;
-}
-
-.navbar:hover .svg {
-    color: black;
 }
 
 .svg-scroll {
@@ -128,6 +116,10 @@
     .link {
         justify-content: center;
     }
+
+    .link:hover {
+        background: black;
+    }
 }
 
 @media only screen and (min-width: 900px) {
@@ -153,4 +145,16 @@
     .item:last-child {
         margin-top: auto;
     }
+
+    .link:hover .text {
+        color: white;
+    }
+    
+    .item .link:hover .svg {
+        color: white;
+    }
+
+    .navbar:hover .svg {
+        color: black;
+}
 }
