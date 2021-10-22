@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/muvie-app/static/css/main.c9d12a4c.chunk.css",
+    "main.js": "/muvie-app/static/js/main.d27a8fcb.chunk.js",
+    "main.js.map": "/muvie-app/static/js/main.d27a8fcb.chunk.js.map",
+    "runtime-main.js": "/muvie-app/static/js/runtime-main.2a900518.js",
+    "runtime-main.js.map": "/muvie-app/static/js/runtime-main.2a900518.js.map",
+    "static/js/2.32106955.chunk.js": "/muvie-app/static/js/2.32106955.chunk.js",
+    "static/js/2.32106955.chunk.js.map": "/muvie-app/static/js/2.32106955.chunk.js.map",
+    "index.html": "/muvie-app/index.html",
+    "static/css/main.c9d12a4c.chunk.css.map": "/muvie-app/static/css/main.c9d12a4c.chunk.css.map",
+    "static/js/2.32106955.chunk.js.LICENSE.txt": "/muvie-app/static/js/2.32106955.chunk.js.LICENSE.txt",
+    "static/media/Landing.module.css": "/muvie-app/static/media/landing-background.59d07848.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2a900518.js",
+    "static/js/2.32106955.chunk.js",
+    "static/css/main.c9d12a4c.chunk.css",
+    "static/js/main.d27a8fcb.chunk.js"
+  ]
+}
