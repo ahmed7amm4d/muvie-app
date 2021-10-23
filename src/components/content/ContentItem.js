@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
 import classes from './ContentItem.module.css';
 import { img_300, unavailable } from '../../config/imgConfig';
+import ModalContent from "./modal/ModalContent";
 
 const ContentItem = (props) => {
+    const [modalIsShown, setModalIsShown] = useState(false);
+
+    const hideModalHandler = () => {
+        setModalIsShown(false);
+    };
+
+    const showModalHandler = () => {
+        setModalIsShown(true);
+    };
+
     //Date Format
     let date = new Date(props.date);
     let year = date.getFullYear();
@@ -136,18 +147,21 @@ const ContentItem = (props) => {
     }
 
     return (
-        <div className={classes.card}>
-            <div className={classes.poster}>
-                <img className={classes.poster} src={props.poster ? `${img_300}/${props.poster}` : unavailable} alt={props.title} />
+        <React.Fragment>
+            {modalIsShown && <ModalContent onClose={hideModalHandler} mediaType={props.mediaType} id={props.id} />}
+            <div className={classes.card} onClick={showModalHandler}>
+                <div className={classes.poster}>
+                    <img className={classes.poster} src={props.poster ? `${img_300}/${props.poster}` : unavailable} alt={props.title} />
+                </div>
+                <span className={classes.title}>{props.title}</span>
+                <span className={classes.badge}>Rating: {props.rating? props.rating : "Not Rated"}</span>
+                <span className={classes.badge}>Language: {language}</span>
+                <div className={classes.subtitle}>
+                    <span>{day+'/' + month + '/'+year}</span>
+                    <span className={type === '' ? classes.notype : classes.type}>{type}</span>
+                </div>
             </div>
-            <span className={classes.title}>{props.title}</span>
-            <span className={classes.badge}>Rating: {props.rating? props.rating : "Not Released Yet"}</span>
-            <span className={classes.badge}>Language: {language}</span>
-            <div className={classes.subtitle}>
-                <span>{day+'/' + month + '/'+year}</span>
-                <span className={type === '' ? classes.notype : classes.type}>{type}</span>
-            </div>
-        </div>
+        </React.Fragment>
     );
 };
 

@@ -1,0 +1,129 @@
+.landscape-image {
+    display: none;
+}
+
+.portrait-image {
+    object-fit: contain;
+    border-radius: 5px 0 0 5px;
+}
+
+.modal-container {
+    display: flex;
+    color: white;
+}
+
+.modal-about {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 0.1rem;
+}
+
+.labels {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-weight: 400;
+}
+
+.info {
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.description {
+    font-size: 1.2rem;
+}
+
+.carousel {
+    width: 910px;
+}
+
+@media only screen and (max-width: 900px) {
+    .modal-container {
+        flex-direction: column;
+    }
+
+    .landscape-image {
+        display: flex;
+        object-fit: contain;
+        border-radius: 5px 5px 0 0;
+    }
+    
+    .portrait-image {
+        display: none;
+    }
+
+    .title {
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    
+    .modal-about {
+        padding: 0.5rem 1rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .tagline {
+        display: none;
+    }
+
+    .group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .labels {
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-bottom: 1rem;
+    }
+    
+    .label {
+        font-weight: 400;
+    }
+
+    .info {
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .carousel {
+        width: 300px;
+        margin-bottom: 0.5rem;
+    }
+
+    .trailer {
+        margin-bottom: 1rem !important;
+    }
+    
+  }

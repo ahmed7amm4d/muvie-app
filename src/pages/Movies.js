@@ -33,7 +33,7 @@ const Movies = (props) => {
             <div className={classes.container}>
                 {movies && movies.map((item) => {
                     return <ContentItem key={item.id} id={item.id} poster={item.poster_path} title={item.title || item.name} 
-                    date={item.release_date || item.first_air_date} rating={item.vote_average} language={item.original_language} />;
+                    date={item.release_date || item.first_air_date} rating={item.vote_average} mediaType="movie" language={item.original_language} />;
                 })}
             </div>
             <CustomPagination setPage={setPage} numberOfPages={numberOfPages} />
