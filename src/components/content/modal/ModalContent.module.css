@@ -59,6 +59,15 @@
     width: 910px;
 }
 
+.close {
+    color: white;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 900px) {
     .modal-container {
         flex-direction: column;
@@ -84,7 +93,7 @@
     .modal-about {
         padding: 0.5rem 1rem;
         justify-content: space-between;
-        align-items: center;
+        /* align-items: center; */
     }
 
     .tagline {

@@ -7,7 +7,7 @@
 .validate {
     color: #f9002b;
     position: absolute;
-    font-size: 1rem;
+    font-size: 0.9rem;
     top: 3rem;
     left: 0.5rem;
     animation-name: validation;

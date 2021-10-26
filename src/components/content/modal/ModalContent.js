@@ -7,6 +7,7 @@ import { img_500, unavailable, unavailableLandscape } from "../../../config/imgC
 import { AiOutlineYoutube } from "react-icons/ai";
 import { Button } from "@material-ui/core";
 import Carousel from "./Carousel";
+import { IoClose } from "react-icons/io5";
 
 const ModalContent = (props) => {
     const [content, setContent] = useState([]);
@@ -87,6 +88,7 @@ const ModalContent = (props) => {
             {content && (
             <Modal onClose={props.onClose}>
                 <div className={classes['modal-container']}>
+                    <IoClose className={classes.close} onClick={props.onClose} />
                     <img className={classes['portrait-image']} src={content.poster_path? `${img_500}/${content.poster_path}` : unavailable} alt={content.name || content.title} />
                     <img className={classes['landscape-image']} src={content.backdrop_path? `${img_500}/${content.backdrop_path}` : unavailableLandscape} 
                     alt={content.name || content.title} />

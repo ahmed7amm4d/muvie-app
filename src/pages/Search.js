@@ -29,10 +29,10 @@ const Search = (props) => {
     const [validate, setValidate] = useState();
 
     const fetchSearch = async () => {
+        if(searchText === "") {
+            return;
+        }
         try {
-            if(searchText === "") {
-                return;
-            }
             const { data } = await axios.get(`https://api.themoviedb.org/3/search/${type ? "tv" : "movie"}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${searchText}&page=${page}&include_adult=false`);
             setContent(data.results);
             setNumberOfPages(data.total_pages);
@@ -85,8 +85,8 @@ const Search = (props) => {
                 <hr className={classes.hr1} />
                 <div className="tabs-container">
                     <Tabs value={type} indicatorColor='secondary' textColor='primary' onChange={tabChangeHandler} aria-label="disabled tabs example">
-                        <Tab style={{fontFamily: "inherit", fontSize: "1rem", letterSpacing: "0.1rem"}} label="Search Movies" />
-                        <Tab style={{fontFamily: "inherit", fontSize: "1rem", letterSpacing: "0.1rem"}} label="Search TV Shows" />
+                        <Tab style={{fontFamily: "inherit", fontSize: "0.9rem", letterSpacing: "0.1rem"}} label="Search Movies" />
+                        <Tab style={{fontFamily: "inherit", fontSize: "0.9rem", letterSpacing: "0.1rem"}} label="Search TV Shows" />
                     </Tabs>
                 </div>
             </ThemeProvider>
